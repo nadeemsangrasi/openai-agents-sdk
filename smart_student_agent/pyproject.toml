@@ -1,0 +1,20 @@
+[project]
+name = "smart-student-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nadeem", email = "nadeemsangrasi903@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents>=0.2.3",
+    "python-dotenv>=1.1.1",
+]
+
+[project.scripts]
+agent = "smart_student_agent.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
