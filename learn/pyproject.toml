@@ -1,0 +1,21 @@
+[project]
+name = "learn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nadeem", email = "nadeemsangrasi903@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents[litellm]>=0.0.19",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+learn = "learn:main"
+agent = "learn.main:start"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,24 @@
+[project]
+name = "basic-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nadeem", email = "nadeemsangrasi903@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents[litellm]>=0.0.14",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+completion_model_conf = "basic_agents.with_chat_completion:model_level_conf"
+completion_sync = "basic_agents.with_chat_completion:sync"
+completion_async = "basic_agents.with_chat_completion:async1_main"
+router = "basic_agents.with_openrouter:start"
+litellm = "basic_agents.with_litellm:start"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,21 @@
+[project]
+name = "guardrails"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nadeem", email = "nadeemsangrasi903@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "chainlit>=2.5.5",
+    "openai-agents>=0.0.16",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+guardrails = "guardrails:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

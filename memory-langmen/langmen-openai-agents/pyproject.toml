@@ -1,0 +1,30 @@
+[project]
+name = "langmen-openai-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nadeem", email = "nadeemsangrasi903@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "dotenv>=0.9.9",
+    "langchain-google-genai>=2.1.5",
+    "langgraph>=0.4.8",
+    "langgraph-checkpoint-postgres>=2.0.21",
+    "langmem>=0.0.27",
+    "langmem-adapter>=0.0.2",
+    "openai-agents>=0.0.17",
+    "psycopg2-binary>=2.9.10",
+    "psycopg[binary]>=3.2.9",
+    "pydantic>=2.11.5",
+]
+
+[project.scripts]
+langmen-openai-agents = "langmen_openai_agents:main"
+agent = "langmen_openai_agents.main:start"
+externel = "langmen_openai_agents.externelDB:start"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

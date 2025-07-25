@@ -1,0 +1,20 @@
+[project]
+name = "agent-hook"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nadeem", email = "nadeemsangrasi903@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents>=0.0.17",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+agent-hook = "agent_hook:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
